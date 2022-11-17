@@ -1,6 +1,6 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/heroku.feature");
 formatter.feature({
-  "name": "Heroku",
+  "name": "HerokuApp",
   "description": "",
   "keyword": "Feature"
 });
@@ -26,7 +26,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "HoverOver",
+  "name": "HoverOver check",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -36,32 +36,34 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "user clicks on \"Hovers\" link",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "user validates view profile links and names are not displayed",
+  "name": "user clicks on \"Hovers\" linkText",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "HerokuSteps.userValidatesViewProfileLinksAndNamesAreNotDisplayed()"
+  "location": "HerokuSteps.userClicksOnLinkText(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user hovers over images and validates texts and links",
+  "name": "user validates view profile link and names are not displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "HerokuSteps.userValidatesViewProfileLinkAndNamesAreNotDisplayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user hover over image and validates link and text",
   "keyword": "And "
 });
 formatter.match({
-  "location": "HerokuSteps.userHoversOverImagesAndValidatesTextsAndLinks()"
+  "location": "HerokuSteps.userHoverOverImageAndValidatesLinkAndText()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"

@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 899383991,
+              "duration": 605540888,
               "status": "passed"
             },
             "line": 4,
@@ -33,7 +33,7 @@
         "before": [
           {
             "result": {
-              "duration": 5171502326,
+              "duration": 2036787489,
               "status": "passed"
             },
             "match": {
@@ -42,7 +42,7 @@
           },
           {
             "result": {
-              "duration": 87169455,
+              "duration": 16243936,
               "status": "passed"
             },
             "match": {
@@ -51,13 +51,13 @@
           }
         ],
         "line": 12,
-        "name": "HoverOver",
+        "name": "HoverOver check",
         "description": "",
-        "id": "heroku;hoverover",
+        "id": "herokuapp;hoverover-check",
         "after": [
           {
             "result": {
-              "duration": 152891215,
+              "duration": 90029710,
               "status": "passed"
             },
             "match": {
@@ -70,34 +70,43 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 536356838,
+              "status": "passed"
             },
             "line": 13,
-            "name": "user clicks on \"Hovers\" link",
-            "match": {},
+            "name": "user clicks on \"Hovers\" linkText",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Hovers\"",
+                  "offset": 15
+                }
+              ],
+              "location": "HerokuSteps.userClicksOnLinkText(String)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 22707,
-              "status": "skipped"
+              "duration": 97378545,
+              "status": "passed"
             },
             "line": 14,
-            "name": "user validates view profile links and names are not displayed",
+            "name": "user validates view profile link and names are not displayed",
             "match": {
-              "location": "HerokuSteps.userValidatesViewProfileLinksAndNamesAreNotDisplayed()"
+              "location": "HerokuSteps.userValidatesViewProfileLinkAndNamesAreNotDisplayed()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 12870,
-              "status": "skipped"
+              "duration": 9544147962,
+              "status": "passed"
             },
             "line": 15,
-            "name": "user hovers over images and validates texts and links",
+            "name": "user hover over image and validates link and text",
             "match": {
-              "location": "HerokuSteps.userHoversOverImagesAndValidatesTextsAndLinks()"
+              "location": "HerokuSteps.userHoverOverImageAndValidatesLinkAndText()"
             },
             "keyword": "And "
           }
@@ -109,9 +118,9 @@
         ]
       }
     ],
-    "name": "Heroku",
+    "name": "HerokuApp",
     "description": "",
-    "id": "heroku",
+    "id": "herokuapp",
     "keyword": "Feature",
     "uri": "src/test/resources/features/heroku.feature",
     "tags": []
